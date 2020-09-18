@@ -14,7 +14,7 @@ namespace Data
     {
         public Item Create(Item entity)
         {
-            const string SQL_STATEMENT = "insert into Item(porcentaje,item,Tipo)values(@eporcentajepresa,@item,@Tipo)";
+            const string SQL_STATEMENT = "insert into Item(porcentaje,item,Tipo,activo)values(@eporcentajepresa,@item,@Tipo,1)";
 
             var db = DatabaseFactory.CreateDatabase(CONNECTION_NAME);
             using (DbCommand cmd = db.GetSqlStringCommand(SQL_STATEMENT))

@@ -38,7 +38,7 @@ namespace Entities
      [RegularExpression("/^([0-9]{11}|[0-9]{2}-[0-9]{8}-[0-9]{1})$",ErrorMessage ="CUIT Invalido")]
         [Required]
 
-        public long cuit { get; set; }
+        public string cuit { get; set; }
 
 
 

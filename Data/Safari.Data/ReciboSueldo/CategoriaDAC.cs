@@ -15,7 +15,7 @@ namespace Data
     {
         public Categoria Create(Categoria entity)
         {
-            const string SQL_STATEMENT = "insert into Categoria(Categoria)values(@Categoria)";
+            const string SQL_STATEMENT = "insert into Categoria(Categoria,activo)values(@Categoria,1)";
 
             var db = DatabaseFactory.CreateDatabase(CONNECTION_NAME);
             using (DbCommand cmd = db.GetSqlStringCommand(SQL_STATEMENT))

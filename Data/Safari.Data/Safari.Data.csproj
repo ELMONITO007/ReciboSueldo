@@ -52,6 +52,7 @@
     <Compile Include="ReciboSueldo\CategoriaDAC.cs" />
     <Compile Include="ReciboSueldo\DepartamentoDAC.cs" />
     <Compile Include="ReciboSueldo\DivisionDAC.cs" />
+    <Compile Include="ReciboSueldo\EmpleadoDAC.cs" />
     <Compile Include="ReciboSueldo\EmpresaDAC.cs" />
     <Compile Include="ReciboSueldo\ItemDAC.cs" />
   </ItemGroup>

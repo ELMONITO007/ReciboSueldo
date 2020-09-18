@@ -14,7 +14,7 @@ namespace Data
     {
         public Division Create(Division entity)
         {
-            const string SQL_STATEMENT = "insert into Division(Division)values(@Division)";
+            const string SQL_STATEMENT = "insert into Division(Division,activo)values(@Division,1)";
 
             var db = DatabaseFactory.CreateDatabase(CONNECTION_NAME);
             using (DbCommand cmd = db.GetSqlStringCommand(SQL_STATEMENT))

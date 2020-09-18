@@ -19,14 +19,14 @@ namespace Data
 
             empresa.Id = GetDataValue<int>(dr, "Id_Empresa");
             empresa.empresa = GetDataValue<string>(dr, "Empresa");
-            empresa.cuit= GetDataValue<int>(dr, "cuit");
+            empresa.cuit= GetDataValue<string>(dr, "cuit");
             empresa.direccion= GetDataValue<string>(dr, "direccion");
             return empresa;
         }
 
         public Empresa Create(Empresa entity)
         {
-            const string SQL_STATEMENT = "insert into empresa(empresa,cuit,direccion)values(@empresa,@cuit,@direccion)";
+            const string SQL_STATEMENT = "insert into empresa(empresa,cuit,direccion,activo)values(@empresa,@cuit,@direccion,1)";
 
             var db = DatabaseFactory.CreateDatabase(CONNECTION_NAME);
             using (DbCommand cmd = db.GetSqlStringCommand(SQL_STATEMENT))

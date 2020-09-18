@@ -49,7 +49,7 @@ namespace Entities
         [RegularExpression("/^([0-9]{11}|[0-9]{2}-[0-9]{8}-[0-9]{1})$", ErrorMessage = "CUIT Invalido")]
         [Required]
 
-        public long cuil { get; set; }
+        public string cuil { get; set; }
 
 
 
@@ -66,7 +66,7 @@ namespace Entities
         [RegularExpression("/^[0-9]{11}$", ErrorMessage = "debe tener 11 numeros")]
         [Required]
 
-        public long cuenta { get; set; }
+        public string cuenta { get; set; }
 
 
         public Empresa empresa { get; set; }
