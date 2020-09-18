@@ -39,7 +39,7 @@ namespace Entities
         [RegularExpression("/^[0-9]{2}$", ErrorMessage = "CUIT Invalido")]
         [Required]
 
-        public long porcentaje { get; set; }
+        public int porcentaje { get; set; }
 
     }
 }

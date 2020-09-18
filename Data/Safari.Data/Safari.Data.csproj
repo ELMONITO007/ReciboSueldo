@@ -46,15 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClienteDAC.cs" />
     <Compile Include="DataAccessComponent.cs" />
-    <Compile Include="EspecieDAC.cs" />
     <Compile Include="IRepository.cs" />
-    <Compile Include="MedicoDAC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SalaDAC.cs" />
-    <Compile Include="TipoMovimientoDAC.cs" />
-    <Compile Include="TipoServicioDAC.cs" />
+    <Compile Include="ReciboSueldo\CategoriaDAC.cs" />
+    <Compile Include="ReciboSueldo\DepartamentoDAC.cs" />
+    <Compile Include="ReciboSueldo\DivisionDAC.cs" />
+    <Compile Include="ReciboSueldo\EmpresaDAC.cs" />
+    <Compile Include="ReciboSueldo\ItemDAC.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

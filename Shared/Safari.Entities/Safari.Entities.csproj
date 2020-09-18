@@ -39,7 +39,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cliente.cs" />
     <Compile Include="ReciboSueldo\AporteJubilatorio.cs" />
     <Compile Include="ReciboSueldo\Categoria.cs" />
     <Compile Include="ReciboSueldo\Departamento.cs" />
@@ -47,12 +46,9 @@
     <Compile Include="ReciboSueldo\Empleado.cs" />
     <Compile Include="ReciboSueldo\Empresa.cs" />
     <Compile Include="EntityBase.cs" />
-    <Compile Include="Especie.cs" />
-    <Compile Include="Medico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sala.cs" />
-    <Compile Include="TipoMovimiento.cs" />
-    <Compile Include="TipoServicio.cs" />
+    <Compile Include="ReciboSueldo\Item.cs" />
+    <Compile Include="ReciboSueldo\ReciboSueldo.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
