@@ -40,6 +40,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente.cs" />
+    <Compile Include="ReciboSueldo\AporteJubilatorio.cs" />
+    <Compile Include="ReciboSueldo\Categoria.cs" />
+    <Compile Include="ReciboSueldo\Departamento.cs" />
+    <Compile Include="ReciboSueldo\Division.cs" />
+    <Compile Include="ReciboSueldo\Empleado.cs" />
+    <Compile Include="ReciboSueldo\Empresa.cs" />
     <Compile Include="EntityBase.cs" />
     <Compile Include="Especie.cs" />
     <Compile Include="Medico.cs" />
@@ -48,6 +54,7 @@
     <Compile Include="TipoMovimiento.cs" />
     <Compile Include="TipoServicio.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

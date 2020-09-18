@@ -3,7 +3,7 @@ using System.Linq;
 using System.ComponentModel;
 using System.Runtime.Serialization;
 
-namespace Safari.Entities
+namespace Entities
 {
     [Serializable]
     [DataContract]
