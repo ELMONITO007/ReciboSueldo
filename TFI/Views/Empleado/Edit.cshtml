@@ -1,0 +1,109 @@
+﻿@model Entities.Empleado
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/modern-business.css" rel="stylesheet" />
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+
+
+    <div class="d-flex flex-column">
+        <div class="container-fluid">
+            <div class="card shadow mb-4 " style="min-width:20%">
+
+                <div class=" card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Editar el Empleado @Model.nombre @Model.apellido </h6>
+
+                </div>
+
+                <div class="card-body">
+                    <h5 class="text-justify">
+                        @Html.LabelFor(model => model.nombre, new { @class = "control-label col-md-2" })
+                    </h5>
+
+                    @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+
+                    <br />
+                    <h5 class="text-justify">
+                        @Html.LabelFor(model => model.apellido, new { @class = "control-label col-md-2" })
+                    </h5>
+
+                    @Html.EditorFor(model => model.apellido, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.apellido, "", new { @class = "text-danger" })
+                    <br />
+
+                    <h5 class="text-justify">
+                        @Html.LabelFor(model => model.fechaIngreso, new { @class = "control-label col-md-4" })
+                    </h5>
+
+                    @Html.EditorFor(model => model.fechaIngreso, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.fechaIngreso, "", new { @class = "text-danger" })
+                    <br />
+                    <h5 class="text-justify">
+                        @Html.LabelFor(model => model.cuil, new { @class = "control-label col-md-2" })
+                    </h5>
+
+                    @Html.EditorFor(model => model.cuil, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.cuil, "", new { @class = "text-danger" })
+                    <br />
+                    <h5 class="text-justify">
+                        @Html.LabelFor(model => model.banco, new { @class = "control-label col-md-2" })
+                    </h5>
+
+                    @Html.EditorFor(model => model.banco, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.banco, "", new { @class = "text-danger" })
+                    <br />
+                    <h5 class="text-justify">
+                        @Html.LabelFor(model => model.cuenta, new { @class = "control-label col-md-2" })
+                    </h5>
+
+                    @Html.EditorFor(model => model.cuenta, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.cuenta, "", new { @class = "text-danger" })
+                    <br />
+
+                    <h5 class="text-justify">
+                        @Html.LabelFor(model => model.categoria.categoria, new { @class = "control-label col-md-2" })
+                    </h5>
+                    @Html.DropDownListFor(model => model.categoria.categoria, (IEnumerable<SelectListItem>)ViewBag.ListaCategoria, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.categoria.categoria, "", new { @class = "text-danger" })
+                    <br />
+
+
+                    <h5 class="text-justify">
+                        @Html.LabelFor(model => model.departamento.departamento, new { @class = "control-label col-md-4" })
+                    </h5>
+                    @Html.DropDownListFor(model => model.departamento.departamento, (IEnumerable<SelectListItem>)ViewBag.listaDepartamento, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.departamento.departamento, "", new { @class = "text-danger" })
+                    <br />
+                    <h5 class="text-justify">
+                        @Html.LabelFor(model => model.division.division, new { @class = "control-label col-md-2" })
+                    </h5>
+                    @Html.DropDownListFor(model => model.division.division, (IEnumerable<SelectListItem>)ViewBag.listaDivision, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.division.division, "", new { @class = "text-danger" })
+                    <br />
+                    <h5 class="text-justify">
+                        @Html.LabelFor(model => model.empresa.empresa, new { @class = "control-label col-md-2" })
+                    </h5>
+                    @Html.DropDownListFor(model => model.empresa.empresa, (IEnumerable<SelectListItem>)ViewBag.listaEmpresa, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.empresa.empresa, "", new { @class = "text-danger" })
+                    <br />
+
+
+                </div>
+                <input type="button" class="btn btn-outline-primary " style="float:left" value="Volver" onclick="location.href='@Url.Action("Index", "Empleado")'" />
+                <br />
+                <input type="submit" value="Guardar" class="btn btn-outline-info" />
+
+
+
+            </div>
+        </div>
+    </div>
+}

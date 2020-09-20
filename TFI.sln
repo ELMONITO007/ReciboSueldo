@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFI", "TFI\TFI.csproj", "{2EC94D47-3C95-46B5-A8F8-9C3F6A47C97C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{562402DB-EEE9-4123-8159-05BF98B4C822}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DATA", "DATA\DATA.csproj", "{8D367758-1EE4-4372-8F7E-CF7EB1DA68DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.csproj", "{55B5043F-78A0-43C6-870F-C6E496204863}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EC94D47-3C95-46B5-A8F8-9C3F6A47C97C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EC94D47-3C95-46B5-A8F8-9C3F6A47C97C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EC94D47-3C95-46B5-A8F8-9C3F6A47C97C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EC94D47-3C95-46B5-A8F8-9C3F6A47C97C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{562402DB-EEE9-4123-8159-05BF98B4C822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{562402DB-EEE9-4123-8159-05BF98B4C822}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{562402DB-EEE9-4123-8159-05BF98B4C822}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{562402DB-EEE9-4123-8159-05BF98B4C822}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D367758-1EE4-4372-8F7E-CF7EB1DA68DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D367758-1EE4-4372-8F7E-CF7EB1DA68DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D367758-1EE4-4372-8F7E-CF7EB1DA68DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D367758-1EE4-4372-8F7E-CF7EB1DA68DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55B5043F-78A0-43C6-870F-C6E496204863}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55B5043F-78A0-43C6-870F-C6E496204863}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55B5043F-78A0-43C6-870F-C6E496204863}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55B5043F-78A0-43C6-870F-C6E496204863}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
+		SolutionGuid = {A64D906A-8C51-42AD-BA39-42611BA3CB0A}
+	EndGlobalSection
+EndGlobal

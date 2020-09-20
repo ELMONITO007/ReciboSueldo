@@ -1,0 +1,25 @@
+﻿@model Entities.Empleado
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/modern-business.css" rel="stylesheet" />
+
+<div>
+    <h3>¿Esta seguro de eliminar el empleado @Model.nombre  @Model.apellido ?</h3>
+    <hr />
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-outline-info" />
+
+            <input type="button" class="btn btn-outline-primary " style="float:right" value="Volver" onclick="location.href='@Url.Action("Index", "Empleado")'" />
+        </div>
+    }
+</div>

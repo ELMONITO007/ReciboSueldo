@@ -1,0 +1,109 @@
+﻿@model Entities.ReciboSueldo
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/modern-business.css" rel="stylesheet" />
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="d-flex flex-column" style="max-width:60%">
+        <div class="container-fluid">
+            <div class="card shadow mb-4">
+                <div class=" card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Crear un Recibo de Suedlo</h6>
+
+
+
+                </div>
+                <div class="card-body">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+
+                    <h5 class="text-justify">
+                        @Html.LabelFor(model => model.empleado.cuil, new { @class = "control-label col-md-2" })
+                    </h5>
+                    @Html.DropDownListFor(model => model.empleado.cuil, (IEnumerable<SelectListItem>)ViewBag.listaCategoria, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.empleado.cuil, "", new { @class = "text-danger" })
+                    <br />
+
+
+
+
+                    <h5 class="text-justify">
+                        @Html.LabelFor(model => model.liquidacion, new { @class = "control-label col-md-2" })
+                    </h5>
+
+                    @Html.EditorFor(model => model.liquidacion, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.liquidacion, "", new { @class = "text-danger" })
+
+                    <br />
+                    <h5 class="text-justify">
+                        @Html.LabelFor(model => model.mes, new { @class = "control-label col-md-2" })
+                    </h5>
+
+                    @Html.EditorFor(model => model.mes, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.mes, "", new { @class = "text-danger" })
+                    <br />
+
+                    <h5 class="text-justify">
+                        @Html.LabelFor(model => model.año, new { @class = "control-label col-md-4" })
+                    </h5>
+
+                    @Html.EditorFor(model => model.año, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.año, "", new { @class = "text-danger" })
+                    <br />
+                    <h5 class="text-justify">
+                        @Html.LabelFor(model => model.sueldo, new { @class = "control-label col-md-2" })
+                    </h5>
+
+                    @Html.EditorFor(model => model.sueldo, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.sueldo, "", new { @class = "text-danger" })
+                    <br />
+                    <h5 class="text-justify">
+                        @Html.LabelFor(model => model.lugar, new { @class = "control-label col-md-2" })
+                    </h5>
+
+                    @Html.EditorFor(model => model.lugar, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.lugar, "", new { @class = "text-danger" })
+                    <br />
+                    <h5 class="text-justify">
+                      Fecha de pago
+                    </h5>
+
+                    @Html.EditorFor(model => model.fechaPago, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.fechaPago, "", new { @class = "text-danger" })
+                    <br />
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <input type="button" class="btn btn-outline-primary " style="margin-left:30%;max-width:40%" value="Volver" onclick="location.href='@Url.Action("Index", "ReciboSueldo")'" />
+
+                <br />
+
+                <input type="submit" style="margin-left:30%;max-width:40%" value="Crear" class="btn btn-outline-info" />
+
+            </div>
+        </div>
+
+    </div>
+}

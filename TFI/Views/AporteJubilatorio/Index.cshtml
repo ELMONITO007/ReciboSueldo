@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Entities.AporteJubilatorio>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="content-wrapper" class="d-flex flex-column">
+    <!-- Main Content -->
+    <div id="content">
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Lista de Aportes </h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                            <div class="col-sm-12">
+                                <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                    <thead>
+
+                                        <tr role="row">
+                                            <th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 103px;">@Html.DisplayNameFor(model => model.empleado.nombre) </th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 162px;">@Html.DisplayNameFor(model => model.empleado.cuil)</th>
+
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 162px;">@Html.DisplayNameFor(model => model.fecha)</th>
+
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 162px;">@Html.DisplayNameFor(model => model.periodo)</th>
+
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 162px;">@Html.DisplayNameFor(model => model.banco)</th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                        <tr role="row" class="odd">
+                                            <td class="sorting_1">
+                                                @Html.DisplayFor(modelItem => item.empleado.apellido),@Html.DisplayFor(modelItem => item.empleado.nombre)
+                                            </td>
+                                            <td class="sorting_1">
+                                                @Html.DisplayFor(modelItem => item.empleado.cuil)
+                                            </td>
+                                            <td class="sorting_1">
+                                                @Html.DisplayFor(modelItem => item.fecha)
+                                            </td>
+                                            <td class="sorting_1">
+                                                @Html.DisplayFor(modelItem => item.periodo)
+                                            </td>
+                                            <td class="sorting_1">
+                                                @Html.DisplayFor(modelItem => item.banco)
+                                            </td>
+                                        </tr>
+                                        }
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
