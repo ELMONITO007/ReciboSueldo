@@ -24,27 +24,23 @@ namespace DATA
         public bool Agregar(LegajoItem legajoItem)
 
         {
-            if (Verificar(legajoItem))
-            {
-                const string SQL_STATEMENT = "insert into LegajoItem(ID_Item,ID_ReciboSueldo,valor)values (@ID_Item,@ID_ReciboSueldo.@valor)";
+           
+                const string SQL_STATEMENT = "insert into LegajoItem(ID_Item,ID_ReciboSueldo,valor)values (@ID_Item,@ID_ReciboSueldo,@valor)";
 
                 var db = DatabaseFactory.CreateDatabase(CONNECTION_NAME);
                 using (DbCommand cmd = db.GetSqlStringCommand(SQL_STATEMENT))
                 {
-                    db.AddInParameter(cmd, "@ID_ReciboSueldo", DbType.Int32, legajoItem.ReciboSueldo.Id);
-                    db.AddInParameter(cmd, "@ID_Item", DbType.Int32, legajoItem.ReciboSueldo.Id);
+                    db.AddInParameter(cmd, "@ID_ReciboSueldo", DbType.Int32, legajoItem.ReciboSueldo.listaReciboSueldo[0].Id);
+                    db.AddInParameter(cmd, "@ID_Item", DbType.Int32, legajoItem.item.Id);
                     db.AddInParameter(cmd, "@valor", DbType.Int32, legajoItem.valor);
-                    Convert.ToInt32(db.ExecuteScalar(cmd));
+                    db.ExecuteNonQuery(cmd);
 
                 }
                 return true;
             }
-            else
-            {
-                return false;
-            }
+           
         
-        }
+        
 
         public bool Verificar(LegajoItem legajoItem)
 

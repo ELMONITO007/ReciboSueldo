@@ -1,0 +1,309 @@
+﻿@model Entities.ReciboSueldo
+
+@{
+    ViewBag.Title = "VerRecibo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="content-wrapper" class="d-flex flex-column">
+    <!-- Main Content -->
+    <div id="content">
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+            <div class="card shadow mb-4">
+               
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                            <div class="col-sm-12">
+                                <table class="table table-bordered dataTable" id="" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;font:">
+                                    <thead>
+
+                                        <tr role="row">
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 30%;font:bold 20px arial;color:black ">Apellido y Nombre </th>
+
+
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width:20%;font:bold 20px arial;color:black ">Legajo</th>
+
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 20%;font:bold 20px arial;color:black ">Cuil</th>
+                                            <th style="width:15%;border-left:none;border-right:none;border-bottom:none"> </th>
+                                            <th style="width:15%;border-left:none;border-right:none;border-bottom:none"> </th>
+                                            <th style="width:15%;border-left:none;border-bottom:none"> </th>
+
+                                    </thead>
+                                    <tbody>
+
+                                        <tr role="row" class="odd">
+                                            <td class="sorting_1">
+                                                Perez, Juan
+
+                                            </td>
+                                            <td class="sorting_1">
+                                                1103
+
+                                            </td>
+
+
+                                            <td>
+                                                23309637089
+
+                                            </td>
+                                            <td style="width:15%;border-left:none;border-right:none;border-bottom:none;border-top:none">
+                                            </td>
+                                            <td style="width:15%;border-left:none;border-right:none;border-bottom:none;border-top:none">
+                                            </td>
+                                            <td style="width:15%;border-left:none;border-bottom:none;border-top:none">
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                    <thead>
+
+                                        <tr role="row">
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 30%;font:bold 20px arial;color:black ">Categoria </th>
+
+
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width:20%;font:bold 20px arial;color:black">Division</th>
+
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 20%;font:bold 20px arial;color:black">Departamento</th>
+                                            <th style="width:15%;border-left:none;border-right:none;border-bottom:none;border-top:none"> </th>
+                                            <th style="width:15%;border-left:none;border-right:none;border-bottom:none;border-top:none"> </th>
+                                            <th style="width:15%;border-left:none;border-bottom:none;border-top:none"> </th>
+
+                                    </thead>
+                                    <tbody>
+
+                                        <tr role="row" class="odd">
+                                            <td class="sorting_1">
+                                                A
+
+                                            </td>
+                                            <td class="sorting_1">
+                                                BA AS
+
+                                            </td>
+
+
+                                            <td>
+                                                sistemas
+
+                                            </td>
+
+                                            <td style="width:15%;border-left:none;border-right:none;border-top:none">
+                                            </td>
+                                            <td style="width:15%;border-left:none;border-right:none;border-top:none">
+                                            </td>
+                                            <td style="width:15%;border-left:none;border-top:none">
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                    <thead>
+
+                                        <tr role="row">
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 30%;font:bold 20px arial;color:black">Fecha de ingreso </th>
+
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 20%;font:bold 20px arial;color:black">Sueldo </th>
+
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width:20%;font:bold 20px arial;color:black">Liquidacion</th>
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width:20%;border-right:none;font:bold 20px arial;color:black">Deposito Aporte Jubilatorio </th>
+                                            <th style="width:15%;border-left:none;border-right:none"> </th>
+                                            <th style="width:15%;border-left:none"> </th>
+
+
+                                    </thead>
+                                    <thead>
+
+                                        <tr role="row">
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 30%;border-right:none;font:bold 20px arial;color:black"></th>
+
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 20%;border-left:none;border-right:none;font:bold 20px arial;color:black"> </th>
+
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width:20%;border-left:none"></th>
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width:15%;font:bold 20px arial;color:black">Periodo </th>
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width:15%;font:bold 20px arial;color:black">Fecha </th>
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width:15%;font:bold 20px arial;color:black">Banco </th>
+
+
+                                    </thead>
+                                    <tbody>
+
+                                        <tr role="row" class="odd">
+                                            <td class="sorting_1">
+                                                01/01/2020
+
+                                            </td>
+                                            <td class="sorting_1">
+                                                18000
+
+                                            </td>
+
+
+                                            <td>
+                                                Mensual
+
+                                            </td>
+                                            <td class="sorting_1">
+                                                01
+
+                                            </td>
+                                            <td class="sorting_1">
+                                                01/10/2020
+
+                                            </td>
+
+
+                                            <td>
+                                                ICBC
+
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+                                <table class="table table-bordered dataTable" id="" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+
+                                    <thead>
+
+                                        <tr role="row">
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;border-bottom:none;border-top:none;font:bold 20px arial;color:black">Codigo</th>
+
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 50%;border-bottom:none;border-top:none;font:bold 20px arial;color:black">Detalle</th>
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;border-bottom:none;border-top:none;font:bold 20px arial;color:black">Con ret</th>
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;border-bottom:none;border-top:none;font:bold 20px arial;color:black">Exentas</th>
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;border-bottom:none;border-top:none;font:bold 20px arial;color:black">Deducciones</th>
+
+
+                                    </thead>
+
+                                    <tbody>
+                                        @*@foreach (var item in Model.listaItem)
+                {*@
+                                        <tr role="row" class="odd">
+                                            <td class="sorting_1">
+                                                1
+                                                @*@Html.DisplayFor(modelItem => item.Id)*@
+                                            </td>
+                                            <td class="sorting_1">
+                                                @*@Html.DisplayFor(modelItem => item.item)*@
+                                                Sueldo
+                                            </td>
+                                            <td class="sorting_1">
+                                                @*@Html.DisplayFor(modelItem => item.fechaIngreso)*@
+                                                1800
+                                            </td>
+                                            <td class="sorting_1">
+                                                @*@Html.DisplayFor(modelItem => item.cuil)*@
+                                            </td>
+                                            <td class="sorting_1">
+                                                @*@Html.DisplayFor(modelItem => item.banco)*@
+                                            </td>
+
+                                        </tr>
+                                        @*}*@
+                                    </tbody>
+                                </table>
+                                <table class="table table-bordered dataTable" id="" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+
+                                    <thead>
+                                        <tr role="row">
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 60%;font:bold 20px arial;color:black">Lugar y fecha de pago</th>
+
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;font:bold 20px arial;color:black">10000</th>
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;font:bold 20px arial;color:black">18000</th>
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;font:bold 20px arial;color:black">300</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr role="row" class="odd">
+                                            <td class="sorting_1" style="border-right:none">
+                                                Buenos aires 30/10/2020
+                                                @*@Html.DisplayFor(modelItem => item.Id)*@
+                                            </td>
+                                            <td class="sorting_1" style="border-right:none;border-left:none">
+                                            </td>
+                                            <td class="sorting_1" style="border-right:none;border-left:none">
+                                            </td>
+
+                                            <td class="sorting_1" style="border-left:none">
+                                            </td>
+                                        </tr>
+
+
+
+                                </table>
+
+                                <table class="table table-bordered dataTable" id="" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+
+                                    <thead>
+                                        <tr role="row">
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 30%;font:bold 20px arial;color:black">Banco Acreditacion</th>
+
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 40%;font:bold 20px arial;color:black">Cuenta</th>
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 30%;font:bold 20px arial;color:black">Total Neto</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr role="row" class="odd">
+                                            <td class="sorting_1">
+                                                Santander
+                                                @*@Html.DisplayFor(modelItem => item.Id)*@
+                                            </td>
+                                            <td class="sorting_1">
+                                                @*@Html.DisplayFor(modelItem => item.item)*@
+                                                12345678910
+                                            </td>
+                                            <td class="sorting_1">
+                                                @*@Html.DisplayFor(modelItem => item.fechaIngreso)*@
+                                                19000
+                                            </td>
+
+
+                                        </tr>
+
+
+
+                                </table>
+                                <table class="table table-bordered dataTable" id="" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+
+                                    <thead>
+
+                                        <tr role="row">
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 30%;font:bold 20px arial;color:black">Son Pesos: <h6>Veinticinco mil</h6></th>
+
+
+
+                                        </tr>
+                                    </thead>
+
+
+                                </table>
+                                <table class="table table-bordered dataTable" id="" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+
+                                    <thead>
+
+                                        <tr role="row">
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width:60%"> <h6>El presente es duplicado del recibo original que obra en nuestro poder firmado por el empleado</h6></th>
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 40%">Firma del empleador:</th>
+
+
+
+                                        </tr>
+                                    </thead>
+
+
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

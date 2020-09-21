@@ -17,16 +17,16 @@ namespace Negocio
             LegajoItem legajo = new LegajoItem();
             ItemComponent item = new ItemComponent();
             ReciboSueldoComponent reciboSueldoComponent = new ReciboSueldoComponent();
-            legajo.ReciboSueldo = reciboSueldoComponent.ReadBy(legajoItem.ReciboSueldo.Id);
+            legajo.ReciboSueldo = reciboSueldoComponent.ReadByLegajo(legajoItem.ReciboSueldo.Id);
 
             legajo.item = item.ReadBy(legajoItem.item.Id);
             if (legajo.item.porcentaje==0)
             {
-                legajo.valor = legajo.ReciboSueldo.sueldo;
+                legajo.valor = legajo.ReciboSueldo.listaReciboSueldo[0].sueldo;
             }
             else
             {
-                legajo.valor = (legajo.ReciboSueldo.sueldo * legajo.item.porcentaje) / 100;
+                legajo.valor = (legajo.ReciboSueldo.listaReciboSueldo[0].sueldo * legajo.item.porcentaje) / 100;
             }
             return legajoItemDAC.Agregar(legajo);
 
@@ -39,5 +39,40 @@ namespace Negocio
             return legajo.Obtener(legajoItem);
 
             }
+        public LegajoItem ObtenerFaltantes(LegajoItem legajoItem)
+
+        {
+            List<LegajoItem> listaLegajoItem = new List<LegajoItem>();
+            listaLegajoItem = Obtener(legajoItem);
+            ItemComponent itemComponent = new ItemComponent();
+            List<Item> items = new List<Item>();
+            items = itemComponent.Read();
+          LegajoItem result = new LegajoItem();
+
+            foreach (Item item in items)
+            {
+                int a = 0;
+                foreach (LegajoItem subItem in listaLegajoItem)
+                {
+                    if (item.Id==subItem.item.Id)
+                    {
+                        a = 1;
+                    }
+
+                }
+                if (a==0)
+                {
+                    result.ListaItem.Add(item);
+                }
+
+            }
+
+            return result;
+
+
         }
+    }
+
+
+    
 }

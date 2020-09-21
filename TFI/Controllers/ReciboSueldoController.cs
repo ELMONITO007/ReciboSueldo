@@ -19,8 +19,11 @@ namespace TFI.Controllers
         }
 
         // GET: ReciboSueldo/Details/5
-        public ActionResult Details(int id)
+        public ActionResult VerRecibo(int id)
         {
+
+
+
             return View();
         }
 
