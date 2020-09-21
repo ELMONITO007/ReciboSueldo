@@ -100,9 +100,11 @@ namespace Entities
         public Empleado empleado { get; set; }
         public List<Item> listaItem { get; set; }
         public List<Empleado> listaEmpleado { get; set; }
+        public List<ReciboSueldo> listaReciboSueldo { get; set; }
         public ReciboSueldo()
         {
-            listaEmpleado = new List<Empleado>();
+            listaReciboSueldo = new List<ReciboSueldo>();
+               listaEmpleado = new List<Empleado>();
             listaItem = new List<Item>();
           empleado = new Empleado(); 
         

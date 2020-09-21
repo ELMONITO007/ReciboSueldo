@@ -12,10 +12,10 @@ namespace TFI.Controllers
     public class ReciboSueldoController : Controller
     {
         // GET: ReciboSueldo
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
-
-            return View();
+            ReciboSueldoComponent reciboSueldo = new ReciboSueldoComponent();
+            return View(reciboSueldo.ReadByLegajo(id));
         }
 
         // GET: ReciboSueldo/Details/5
@@ -25,20 +25,12 @@ namespace TFI.Controllers
         }
 
         // GET: ReciboSueldo/Create
-        public ActionResult Create()
+        public ActionResult Create(int id)
         {
             ReciboSueldo reciboSueldo = new ReciboSueldo();
             EmpleadoComponent empleado = new EmpleadoComponent();
             reciboSueldo.listaEmpleado = empleado.Read();
-            reciboSueldo.listaEmpleado.Select(y =>
-                                new
-                                {
-                                    y.Id,
-                                    y.cuil
-                                });
-
-            ViewBag.ListaCategoria = new SelectList(reciboSueldo.listaEmpleado, "Id", "cuil");
-                
+            reciboSueldo.empleado = empleado.ReadBy(id);
               
             return View(reciboSueldo);
         }
@@ -51,7 +43,7 @@ namespace TFI.Controllers
             {
                 ReciboSueldo reciboSueldo = new ReciboSueldo();
                 ReciboSueldoComponent reciboSueldoComponent = new ReciboSueldoComponent(); 
-                reciboSueldo.empleado.Id = int.Parse(collection.Get("empleado.cuil"));
+                reciboSueldo.empleado.Id = int.Parse(collection.Get("empleado.Id"));
                 reciboSueldo.liquidacion = collection.Get("liquidacion");
                 reciboSueldo.mes = int.Parse(collection.Get("mes"));
                 reciboSueldo.año = int.Parse(collection.Get("año"));
@@ -62,7 +54,7 @@ namespace TFI.Controllers
                 reciboSueldoComponent.Create(reciboSueldo);
                 // TODO: Add insert logic here
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index",new { id = reciboSueldo.empleado.Id });
             }
             catch (Exception e)
             {

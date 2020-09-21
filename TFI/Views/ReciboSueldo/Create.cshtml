@@ -15,22 +15,17 @@
         <div class="container-fluid">
             <div class="card shadow mb-4">
                 <div class=" card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Crear un Recibo de Suedlo</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Crear un Recibo de Sueldo para el empleando @Model.empleado.apellido , @Model.empleado.nombre , Con Cuil @Model.empleado.cuil y legajo @Model.empleado.Id</h6>
 
 
 
                 </div>
                 <div class="card-body">
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model=> model.empleado.Id)
 
 
-
-                    <h5 class="text-justify">
-                        @Html.LabelFor(model => model.empleado.cuil, new { @class = "control-label col-md-2" })
-                    </h5>
-                    @Html.DropDownListFor(model => model.empleado.cuil, (IEnumerable<SelectListItem>)ViewBag.listaCategoria, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.empleado.cuil, "", new { @class = "text-danger" })
-                    <br />
+              
 
 
 

@@ -51,6 +51,7 @@
     <Compile Include="Empresa.cs" />
     <Compile Include="EntityBase.cs" />
     <Compile Include="Item.cs" />
+    <Compile Include="LegajoItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReciboSueldo.cs" />
     <Compile Include="TipoItem.cs" />

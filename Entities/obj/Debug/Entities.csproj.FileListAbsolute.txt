@@ -4,3 +4,9 @@ C:\Users\benitand\source\repos\TFI\Entities\obj\Debug\Entities.csproj.CoreCompil
 C:\Users\benitand\source\repos\TFI\Entities\obj\Debug\Entities.dll
 C:\Users\benitand\source\repos\TFI\Entities\obj\Debug\Entities.pdb
 C:\Users\benitand\source\repos\TFI\Entities\obj\Debug\Entities.csprojAssemblyReference.cache
+C:\Users\benitand\source\repos\ReciboSueldo\Entities\bin\Debug\Entities.dll
+C:\Users\benitand\source\repos\ReciboSueldo\Entities\bin\Debug\Entities.pdb
+C:\Users\benitand\source\repos\ReciboSueldo\Entities\obj\Debug\Entities.csprojAssemblyReference.cache
+C:\Users\benitand\source\repos\ReciboSueldo\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+C:\Users\benitand\source\repos\ReciboSueldo\Entities\obj\Debug\Entities.dll
+C:\Users\benitand\source\repos\ReciboSueldo\Entities\obj\Debug\Entities.pdb

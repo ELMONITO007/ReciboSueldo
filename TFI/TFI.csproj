@@ -2013,6 +2013,9 @@
     <Content Include="Views\Item\Edit.cshtml" />
     <Content Include="Views\Item\Delete.cshtml" />
     <Content Include="Views\ReciboSueldo\Create.cshtml" />
+    <Content Include="Views\ReciboSueldo\Index.cshtml" />
+    <Content Include="Views\AporteJubilatorio\Create.cshtml" />
+    <Content Include="Views\AporteJubilatorio\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

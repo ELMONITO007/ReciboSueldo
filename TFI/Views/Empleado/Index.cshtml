@@ -79,7 +79,7 @@
                </td>
                <td>
                    @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
-
+                   @Html.ActionLink("Ver Recibos", "index", "ReciboSueldo", new { id = item.Id },null) |
                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
                </td>
            </tr>

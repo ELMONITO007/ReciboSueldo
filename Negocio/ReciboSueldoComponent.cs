@@ -1,4 +1,5 @@
-﻿using DATA;
+﻿using Business;
+using DATA;
 using Entities;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,21 @@ namespace Negocio
         public override ReciboSueldo ReadBy(int id)
         {
             throw new NotImplementedException();
+        }
+        public ReciboSueldo ReadByLegajo(int id)
+        {
+            ReciboSueldoDAC reciboSueldoComponent = new ReciboSueldoDAC();
+            ReciboSueldo reciboSueldo = new ReciboSueldo();
+            reciboSueldo.listaReciboSueldo = reciboSueldoComponent.ReadByLegajo(id);
+
+            EmpleadoComponent empleadoComponent = new EmpleadoComponent();
+            if (reciboSueldo.listaReciboSueldo.Count!=0)
+            {
+                reciboSueldo.empleado = empleadoComponent.ReadBy(reciboSueldo.listaReciboSueldo[0].empleado.Id);
+            }
+           
+
+            return reciboSueldo;
         }
 
         public override ReciboSueldo ReadBy(ReciboSueldo objeto)

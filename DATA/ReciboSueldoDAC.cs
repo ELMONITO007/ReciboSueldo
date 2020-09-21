@@ -41,7 +41,13 @@ namespace DATA
 
         public ReciboSueldo Load(IDataReader dr)
         {
-            throw new NotImplementedException();
+            ReciboSueldo reciboSueldo = new ReciboSueldo();
+            reciboSueldo.Id= GetDataValue<int>(dr, "Id_ReciboSueldo");
+            reciboSueldo.año = GetDataValue<int>(dr, "año");
+            reciboSueldo.empleado.Id= GetDataValue<int>(dr, "Legajo");
+            reciboSueldo.mes = GetDataValue<int>(dr, "mes");
+            reciboSueldo.sueldo= GetDataValue<int>(dr, "sueldo");
+            return reciboSueldo;
         }
 
         public List<ReciboSueldo> Read()
@@ -51,17 +57,57 @@ namespace DATA
 
         public ReciboSueldo ReadBy(int id)
         {
-            throw new NotImplementedException();
+            const string SQL_STATEMENT = "SELECT * FROM ReciboSueldo where activo=1 and Id_ReciboSueldo=@Id ";
+            ReciboSueldo empleado = null;
+
+            var db = DatabaseFactory.CreateDatabase(CONNECTION_NAME);
+            using (DbCommand cmd = db.GetSqlStringCommand(SQL_STATEMENT))
+            {
+                db.AddInParameter(cmd, "@Id", DbType.Int32, id);
+                using (IDataReader dr = db.ExecuteReader(cmd))
+                {
+                    if (dr.Read())
+                    {
+                        empleado = Load(dr);
+                    }
+                }
+                return empleado;
+            }
         }
 
         public ReciboSueldo ReadBy(ReciboSueldo entity)
         {
+
             throw new NotImplementedException();
         }
 
+        public List<ReciboSueldo> ReadByLegajo(int id)
+        {
+
+            const string SQL_STATEMENT = "select * from ReciboSueldo where Legajo=@Id and activo=1 ";
+            List<ReciboSueldo> result = new List<ReciboSueldo>();
+
+            var db = DatabaseFactory.CreateDatabase(CONNECTION_NAME);
+            using (DbCommand cmd = db.GetSqlStringCommand(SQL_STATEMENT))
+            {
+                db.AddInParameter(cmd, "@Id", DbType.Int32, id);
+                using (IDataReader dr = db.ExecuteReader(cmd))
+                {
+                    while (dr.Read())
+                    {
+                        ReciboSueldo categoria = Load(dr);
+                        result.Add(categoria);
+                    }
+                }
+            }
+            return result;
+        }
         public void Update(ReciboSueldo entity)
         {
             throw new NotImplementedException();
         }
+
+
+       
     }
 }

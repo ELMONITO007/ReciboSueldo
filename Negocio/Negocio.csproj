@@ -49,6 +49,7 @@
     <Compile Include="EmpleadoComponent.cs" />
     <Compile Include="EmpresaComponent.cs" />
     <Compile Include="ItemComponent.cs" />
+    <Compile Include="LegajoItemComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReciboSueldoComponent.cs" />
     <Compile Include="TipoItemComponent.cs" />

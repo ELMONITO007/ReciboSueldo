@@ -76,6 +76,7 @@
     <Compile Include="EmpresaDAC.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="ItemDAC.cs" />
+    <Compile Include="LegajoItemDAC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReciboSueldoDAC.cs" />
     <Compile Include="TipoItem.cs" />
