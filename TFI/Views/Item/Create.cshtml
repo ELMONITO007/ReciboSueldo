@@ -27,7 +27,7 @@
                         @Html.LabelFor(model => model.item, new { @class = "control-label col-md-2" })
                     </h5>
 
-                    @Html.EditorFor(model => model.item, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.item, new { htmlAttributes = new { @class = "form-control" }, required = "required" })
                     @Html.ValidationMessageFor(model => model.item, "", new { @class = "text-danger" })
 
                     <br />
@@ -35,7 +35,7 @@
                         @Html.LabelFor(model => model.porcentaje, new { @class = "control-label col-md-2" })
                     </h5>
 
-                    @Html.EditorFor(model => model.porcentaje, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.porcentaje, new { htmlAttributes = new { @class = "form-control" }, required = "required" })
                     @Html.ValidationMessageFor(model => model.porcentaje, "", new { @class = "text-danger" })
                     <br />
 
@@ -44,7 +44,7 @@
                     <h5 class="text-justify">
                         @Html.LabelFor(model => model.Tipo, new { @class = "control-label col-md-2" })
                     </h5>
-                    @Html.DropDownListFor(model => model.Tipo.tipoItem, (IEnumerable<SelectListItem>)ViewBag.ListaCategoria, new { @class = "form-control" })
+                    @Html.DropDownListFor(model => model.Tipo.tipoItem, (IEnumerable<SelectListItem>)ViewBag.ListaCategoria, new { @class = "form-control" }, required = "required")
                     @Html.ValidationMessageFor(model => model.Tipo.tipoItem, "", new { @class = "text-danger" })
                     <br />
 

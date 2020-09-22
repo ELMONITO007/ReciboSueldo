@@ -35,7 +35,7 @@
 
                                         <tr role="row" class="odd">
                                             <td class="sorting_1">
-                                               @Model.empleado.apellido, @Model.empleado.nombre
+                                                @Model.empleado.apellido, @Model.empleado.nombre
 
                                             </td>
                                             <td class="sorting_1">
@@ -75,7 +75,7 @@
 
                                         <tr role="row" class="odd">
                                             <td class="sorting_1">
-                                              @Model.empleado.categoria.categoria
+                                                @Model.empleado.categoria.categoria
 
                                             </td>
                                             <td class="sorting_1">
@@ -130,11 +130,11 @@
 
                                         <tr role="row" class="odd">
                                             <td class="sorting_1">
-                                                @{ 
+                                                @{
                                                     string fecha = Model.empleado.fechaIngreso.ToString("dd/MM/yyyy");
-                                                 
+
                                                 }
-                                               @fecha
+                                                @fecha
 
                                             </td>
                                             <td class="sorting_1">
@@ -160,7 +160,7 @@
 
 
                                             <td>
-                                               @Model.empleado.banco
+                                                @Model.empleado.banco
 
                                             </td>
                                         </tr>
@@ -185,35 +185,35 @@
 
                                     <tbody>
                                         @foreach (var item in Model.listaItem)
-                {
-                                        <tr role="row" class="odd">
-                                            <td class="sorting_1"  style="border:none">
-                                               @item.item.Id
-                                            </td>
-                                            <td class="sorting_1" style="border:none">
-                                                @item.item.item
-                                            </td>
-                                            <td class="sorting_1" style="border:none">
-                                                @if (item.item.Tipo.tipoItem == "Retencion")
-                                                {
-                                                    @item.valor
-                                                }
+                                        {
+                                            <tr role="row" class="odd">
+                                                <td class="sorting_1" style="border:none">
+                                                    @item.item.Id
+                                                </td>
+                                                <td class="sorting_1" style="border:none">
+                                                    @item.item.item
+                                                </td>
+                                                <td class="sorting_1" style="border:none">
+                                                    @if (item.item.Tipo.tipoItem == "Retencion")
+                                                    {
+                                                        @item.valor
+                                                    }
 
-                                            </td>
-                                            <td class="sorting_1" style="border:none">
-                                                @if (item.item.Tipo.tipoItem == "Exentas")
-                                                {
-                                                    @item.valor
-                                                }
-                                            </td>
-                                            <td class="sorting_1" style="border:none">
-                                                @if (item.item.Tipo.tipoItem == "Deducciones")
-                                                {
-                                                    @item.valor
-                                                }
-                                            </td>
+                                                </td>
+                                                <td class="sorting_1" style="border:none">
+                                                    @if (item.item.Tipo.tipoItem == "Exentas")
+                                                    {
+                                                        @item.valor
+                                                    }
+                                                </td>
+                                                <td class="sorting_1" style="border:none">
+                                                    @if (item.item.Tipo.tipoItem == "Deducciones")
+                                                    {
+                                                        @item.valor
+                                                    }
+                                                </td>
 
-                                        </tr>
+                                            </tr>
                                         }
                                     </tbody>
                                 </table>
@@ -234,7 +234,7 @@
                                         <tr role="row" class="odd">
                                             <td class="sorting_1" style="border-right:none">
                                                 Buenos aires @fecha
-                                              
+
                                             </td>
                                             <td class="sorting_1" style="border-right:none;border-left:none">
                                             </td>
@@ -269,7 +269,7 @@
                                                 @Model.empleado.cuenta
                                             </td>
                                             <td class="sorting_1">
-                                               @Model.totalNeto
+                                                @Model.totalNeto
                                             </td>
 
 
@@ -309,6 +309,8 @@
                                 </table>
 
                             </div>
+                            <input type="button" class="btn btn-outline-primary " style="margin-left:0%;max-width:40%" value="Volver" onclick="location.href='@Url.Action("Index", "ReciboSueldo",new { id=Model.empleado.Id})'" />
+
                         </div>
                     </div>
 

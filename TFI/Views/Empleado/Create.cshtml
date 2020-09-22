@@ -30,7 +30,7 @@
                         @Html.LabelFor(model => model.nombre, new { @class = "control-label col-md-2" })
                     </h5>
 
-                    @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" }, required = "required" })
                     @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
 
                     <br />
@@ -38,7 +38,7 @@
                         @Html.LabelFor(model => model.apellido, new { @class = "control-label col-md-2" })
                     </h5>
 
-                    @Html.EditorFor(model => model.apellido, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.apellido, new { htmlAttributes = new { @class = "form-control" }, required = "required" })
                     @Html.ValidationMessageFor(model => model.apellido, "", new { @class = "text-danger" })
                     <br />
 
@@ -46,28 +46,28 @@
                         @Html.LabelFor(model => model.fechaIngreso, new { @class = "control-label col-md-4" })
                     </h5>
 
-                    @Html.EditorFor(model => model.fechaIngreso, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.fechaIngreso, new { htmlAttributes = new { @class = "form-control" }, required = "required" })
                     @Html.ValidationMessageFor(model => model.fechaIngreso, "", new { @class = "text-danger" })
                     <br />
                     <h5 class="text-justify">
                         @Html.LabelFor(model => model.cuil, new { @class = "control-label col-md-2" })
                     </h5>
 
-                    @Html.EditorFor(model => model.cuil, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.cuil, new { htmlAttributes = new { @class = "form-control" }, required = "required" })
                     @Html.ValidationMessageFor(model => model.cuil, "", new { @class = "text-danger" })
                     <br />
                     <h5 class="text-justify">
                         @Html.LabelFor(model => model.banco, new { @class = "control-label col-md-2" })
                     </h5>
 
-                    @Html.EditorFor(model => model.banco, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.banco, new { htmlAttributes = new { @class = "form-control" }, required = "required" })
                     @Html.ValidationMessageFor(model => model.banco, "", new { @class = "text-danger" })
                     <br />
                     <h5 class="text-justify">
                         @Html.LabelFor(model => model.cuenta, new { @class = "control-label col-md-2" })
                     </h5>
 
-                    @Html.EditorFor(model => model.cuenta, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.cuenta, new { htmlAttributes = new { @class = "form-control" }, required = "required" })
                     @Html.ValidationMessageFor(model => model.cuenta, "", new { @class = "text-danger" })
                     <br />
 

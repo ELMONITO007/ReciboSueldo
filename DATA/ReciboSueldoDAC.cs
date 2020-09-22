@@ -47,6 +47,7 @@ namespace DATA
             reciboSueldo.empleado.Id= GetDataValue<int>(dr, "Legajo");
             reciboSueldo.mes = GetDataValue<int>(dr, "mes");
             reciboSueldo.sueldo= GetDataValue<int>(dr, "sueldo");
+            reciboSueldo.liquidacion = GetDataValue<string>(dr, "liquidacion");
             return reciboSueldo;
         }
 
