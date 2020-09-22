@@ -1,4 +1,5 @@
-﻿using DATA;
+﻿
+using DATA;
 using Entities;
 using System;
 using System.Collections.Generic;
@@ -36,7 +37,20 @@ namespace Negocio
 
         {
             LegajoItemDAC legajo = new LegajoItemDAC();
-            return legajo.Obtener(legajoItem);
+            List < LegajoItem> unaLegajo = new List<LegajoItem>();
+            List<LegajoItem> result = new List<LegajoItem>();
+            unaLegajo = legajo.Obtener(legajoItem);
+            foreach (LegajoItem item in unaLegajo)
+            {
+                LegajoItem aux = new LegajoItem();
+                aux.ReciboSueldo = item.ReciboSueldo;
+                ItemComponent itemComponent = new ItemComponent();
+                aux.item = itemComponent.ReadBy(item.item.Id);
+                aux.valor = item.valor;
+                result.Add(aux);
+                     }
+
+            return result;
 
             }
         public LegajoItem ObtenerFaltantes(LegajoItem legajoItem)

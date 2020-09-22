@@ -35,17 +35,17 @@
 
                                         <tr role="row" class="odd">
                                             <td class="sorting_1">
-                                                Perez, Juan
+                                               @Model.empleado.apellido, @Model.empleado.nombre
 
                                             </td>
                                             <td class="sorting_1">
-                                                1103
+                                                @Model.empleado.Id
 
                                             </td>
 
 
                                             <td>
-                                                23309637089
+                                                @Model.empleado.cuil
 
                                             </td>
                                             <td style="width:15%;border-left:none;border-right:none;border-bottom:none;border-top:none">
@@ -75,17 +75,17 @@
 
                                         <tr role="row" class="odd">
                                             <td class="sorting_1">
-                                                A
+                                              @Model.empleado.categoria.categoria
 
                                             </td>
                                             <td class="sorting_1">
-                                                BA AS
+                                                @Model.empleado.division.division
 
                                             </td>
 
 
                                             <td>
-                                                sistemas
+                                                @Model.empleado.departamento.departamento
 
                                             </td>
 
@@ -130,17 +130,23 @@
 
                                         <tr role="row" class="odd">
                                             <td class="sorting_1">
-                                                01/01/2020
+                                                @{ 
+                                                    string fecha = Model.empleado.fechaIngreso.ToString("dd/MM/yyyy");
+                                                 
+                                                }
+                                               @fecha
 
                                             </td>
                                             <td class="sorting_1">
-                                                18000
+
+
+                                                @Model.sueldo
 
                                             </td>
 
 
                                             <td>
-                                                Mensual
+                                                @Model.liquidacion
 
                                             </td>
                                             <td class="sorting_1">
@@ -148,13 +154,13 @@
 
                                             </td>
                                             <td class="sorting_1">
-                                                01/10/2020
+                                                @fecha
 
                                             </td>
 
 
                                             <td>
-                                                ICBC
+                                               @Model.empleado.banco
 
                                             </td>
                                         </tr>
@@ -167,41 +173,48 @@
                                     <thead>
 
                                         <tr role="row">
-                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;border-bottom:none;border-top:none;font:bold 20px arial;color:black">Codigo</th>
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;border-top:none;font:bold 20px arial;color:black">Codigo</th>
 
-                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 50%;border-bottom:none;border-top:none;font:bold 20px arial;color:black">Detalle</th>
-                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;border-bottom:none;border-top:none;font:bold 20px arial;color:black">Con ret</th>
-                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;border-bottom:none;border-top:none;font:bold 20px arial;color:black">Exentas</th>
-                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;border-bottom:none;border-top:none;font:bold 20px arial;color:black">Deducciones</th>
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 50%;border-top:none;font:bold 20px arial;color:black">Detalle</th>
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;border-top:none;font:bold 20px arial;color:black">Con ret</th>
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;border-top:none;font:bold 20px arial;color:black">Exentas</th>
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;border-top:none;font:bold 20px arial;color:black">Deducciones</th>
 
 
                                     </thead>
 
                                     <tbody>
-                                        @*@foreach (var item in Model.listaItem)
-                {*@
+                                        @foreach (var item in Model.listaItem)
+                {
                                         <tr role="row" class="odd">
-                                            <td class="sorting_1">
-                                                1
-                                                @*@Html.DisplayFor(modelItem => item.Id)*@
+                                            <td class="sorting_1"  style="border:none">
+                                               @item.item.Id
                                             </td>
-                                            <td class="sorting_1">
-                                                @*@Html.DisplayFor(modelItem => item.item)*@
-                                                Sueldo
+                                            <td class="sorting_1" style="border:none">
+                                                @item.item.item
                                             </td>
-                                            <td class="sorting_1">
-                                                @*@Html.DisplayFor(modelItem => item.fechaIngreso)*@
-                                                1800
+                                            <td class="sorting_1" style="border:none">
+                                                @if (item.item.Tipo.tipoItem == "Retencion")
+                                                {
+                                                    @item.valor
+                                                }
+
                                             </td>
-                                            <td class="sorting_1">
-                                                @*@Html.DisplayFor(modelItem => item.cuil)*@
+                                            <td class="sorting_1" style="border:none">
+                                                @if (item.item.Tipo.tipoItem == "Exentas")
+                                                {
+                                                    @item.valor
+                                                }
                                             </td>
-                                            <td class="sorting_1">
-                                                @*@Html.DisplayFor(modelItem => item.banco)*@
+                                            <td class="sorting_1" style="border:none">
+                                                @if (item.item.Tipo.tipoItem == "Deducciones")
+                                                {
+                                                    @item.valor
+                                                }
                                             </td>
 
                                         </tr>
-                                        @*}*@
+                                        }
                                     </tbody>
                                 </table>
                                 <table class="table table-bordered dataTable" id="" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
@@ -210,9 +223,9 @@
                                         <tr role="row">
                                             <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 60%;font:bold 20px arial;color:black">Lugar y fecha de pago</th>
 
-                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;font:bold 20px arial;color:black">10000</th>
-                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;font:bold 20px arial;color:black">18000</th>
-                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;font:bold 20px arial;color:black">300</th>
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;font:bold 20px arial;color:black">@Model.totalRetencion</th>
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;font:bold 20px arial;color:black">@Model.totalExenta</th>
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 10%;font:bold 20px arial;color:black">@Model.totalDeducciones</th>
 
                                         </tr>
                                     </thead>
@@ -220,8 +233,8 @@
 
                                         <tr role="row" class="odd">
                                             <td class="sorting_1" style="border-right:none">
-                                                Buenos aires 30/10/2020
-                                                @*@Html.DisplayFor(modelItem => item.Id)*@
+                                                Buenos aires @fecha
+                                              
                                             </td>
                                             <td class="sorting_1" style="border-right:none;border-left:none">
                                             </td>
@@ -250,16 +263,13 @@
 
                                         <tr role="row" class="odd">
                                             <td class="sorting_1">
-                                                Santander
-                                                @*@Html.DisplayFor(modelItem => item.Id)*@
+                                                @Model.empleado.banco
                                             </td>
                                             <td class="sorting_1">
-                                                @*@Html.DisplayFor(modelItem => item.item)*@
-                                                12345678910
+                                                @Model.empleado.cuenta
                                             </td>
                                             <td class="sorting_1">
-                                                @*@Html.DisplayFor(modelItem => item.fechaIngreso)*@
-                                                19000
+                                               @Model.totalNeto
                                             </td>
 
 
@@ -273,7 +283,7 @@
                                     <thead>
 
                                         <tr role="row">
-                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 30%;font:bold 20px arial;color:black">Son Pesos: <h6>Veinticinco mil</h6></th>
+                                            <th class="" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 30%;font:bold 20px arial;color:black">Son Pesos: <h6></h6></th>
 
 
 

@@ -78,7 +78,23 @@ namespace DATA
         public ReciboSueldo ReadBy(ReciboSueldo entity)
         {
 
-            throw new NotImplementedException();
+            const string SQL_STATEMENT = "select * from ReciboSueldo where ID_ReciboSueldo=@Id  ";
+           ReciboSueldo result = new ReciboSueldo();
+
+            var db = DatabaseFactory.CreateDatabase(CONNECTION_NAME);
+            using (DbCommand cmd = db.GetSqlStringCommand(SQL_STATEMENT))
+            {
+                db.AddInParameter(cmd, "@Id", DbType.Int32, entity.Id);
+                using (IDataReader dr = db.ExecuteReader(cmd))
+                {
+                    if (dr.Read())
+                    {
+                        result = Load(dr);
+                   
+                    }
+                }
+            }
+            return result;
         }
 
         public List<ReciboSueldo> ReadByLegajo(int id)
@@ -106,8 +122,12 @@ namespace DATA
         {
             throw new NotImplementedException();
         }
+        public void UpdateRetencion(ReciboSueldo entity)
+        {
+
+            throw new NotImplementedException();
+        }
 
 
-       
     }
 }

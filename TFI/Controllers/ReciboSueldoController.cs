@@ -21,10 +21,11 @@ namespace TFI.Controllers
         // GET: ReciboSueldo/Details/5
         public ActionResult VerRecibo(int id)
         {
+            ReciboSueldoComponent reciboSueldoComponent = new ReciboSueldoComponent();
+            ReciboSueldo objeto = new ReciboSueldo();
+            objeto.Id = id;
 
-
-
-            return View();
+            return View(reciboSueldoComponent.ReadBy(objeto));
         }
 
         // GET: ReciboSueldo/Create

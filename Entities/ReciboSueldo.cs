@@ -98,14 +98,14 @@ namespace Entities
         public int totalNeto { get; set; }
 
         public Empleado empleado { get; set; }
-        public List<Item> listaItem { get; set; }
+        public List<LegajoItem> listaItem { get; set; }
         public List<Empleado> listaEmpleado { get; set; }
         public List<ReciboSueldo> listaReciboSueldo { get; set; }
         public ReciboSueldo()
         {
             listaReciboSueldo = new List<ReciboSueldo>();
                listaEmpleado = new List<Empleado>();
-            listaItem = new List<Item>();
+            listaItem = new List<LegajoItem>();
           empleado = new Empleado(); 
         
         }
